@@ -2,10 +2,16 @@
 젠킨스와 도커를 활용하여 CI/CD 파이프라인 구축을 해보았습니다.<br>
 예제로, 도커에서 Terraform 컨테이너를 띄운 뒤 AWS 보안그룹을 생성합니다.
 ![main](https://user-images.githubusercontent.com/62891711/111121890-9413dc80-85b0-11eb-8486-f3784724dc73.png)
+<br>
+#### 추가로 docker-compose 사용가능
+![3](https://user-images.githubusercontent.com/62891711/111124856-531dc700-85b4-11eb-8340-1081a466c2b4.png)
+
+<br>
 
 ### 구성도(Docker Out of Docker)
 젠킨스 내부에서 도커를 사용하기 위하여 /var/run/docker.sock 볼륨을 공유합니다.<br>
 (이러한 방법은 Docker in Docker의 privileged mode의 보안 취약점을 해결할 수 있습니다.)
+![1](https://user-images.githubusercontent.com/62891711/111124639-14880c80-85b4-11eb-9a3c-7bd8bbdc8153.png)
 ![2](https://user-images.githubusercontent.com/62891711/111122433-654a3600-85b1-11eb-839e-a467cce1586d.png)
 
 ### Jenkinsfile, credentials 수정
